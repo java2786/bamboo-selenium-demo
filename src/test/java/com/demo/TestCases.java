@@ -27,7 +27,7 @@ public class TestCases {
 
 	@Test
 	public void test() {
-		driver.get("http://localhost:8888/web/index.jsp");
+		driver.get("https://jenkins.io/");
 		
 		Assert.assertTrue(true);
 	}
