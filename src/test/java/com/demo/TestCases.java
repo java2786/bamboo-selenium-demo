@@ -4,12 +4,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestCases {
 	WebDriver driver;
@@ -24,16 +20,14 @@ public class TestCases {
 	}
 	
 	@After
-	public void down() {
+	public void down() throws InterruptedException {
+		Thread.sleep(5000);
 		driver.close();
 	}
 
 	@Test
 	public void test() {
-		driver.get("https://stackoverflow.com/");
-		
-		WebElement loginBtn = driver.findElement(By.xpath("/html/body/header/div/ol[2]/li[2]/a[1]"));
-		loginBtn.click();
+		driver.get("http://localhost:8888/web/index.jsp");
 		
 		Assert.assertTrue(true);
 	}
