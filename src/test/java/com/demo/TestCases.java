@@ -29,7 +29,7 @@ public class TestCases {
 	public void test() {
 		driver.get("https://jenkins.io/");
 		
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 	}
 	
 	
